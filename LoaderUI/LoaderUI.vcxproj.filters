@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Dateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Form Dateien">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Dateien">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Debug">
+      <UniqueIdentifier>{6bc37e40-9009-44e5-9d76-a166c98c9e55}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generierte Dateien\Release">
+      <UniqueIdentifier>{3da9b291-d509-441f-9962-b38af3f625fb}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Source Dateien\QtSingleApplication">
+      <UniqueIdentifier>{0516ff64-dce4-45c6-9b36-518711b997bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Dateien\JSON">
+      <UniqueIdentifier>{bcf36f43-bd11-4e70-b9b6-f2740d100e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Dateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+      <ParseFiles>true</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LoaderUI.rc">
+      <Filter>Resource Dateien</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\loadermainwin.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_loadermainwin.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_loadermainwin.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_loadermainwin.cpp">
+      <Filter>Generierte Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qcustomstylewidget.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qcustomstylewidget.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qcustomstylewidget.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QtSingleApplication\qtlocalpeer.cpp">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtlocalpeer.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtlocalpeer.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QtSingleApplication\qtlockedfile.cpp">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QtSingleApplication\qtlockedfile_unix.cpp">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QtSingleApplication\qtlockedfile_win.cpp">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QtSingleApplication\qtsingleapplication.cpp">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtsingleapplication.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtsingleapplication.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QtSingleApplication\qtsinglecoreapplication.cpp">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qtsinglecoreapplication.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qtsinglecoreapplication.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\JSON\json.cpp">
+      <Filter>Source Dateien\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="src\qjsontranslator.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qjsontranslator.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qjsontranslator.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\infotab.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_infotab.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_infotab.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\configtab.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_configtab.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_configtab.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="src\containertab.cpp">
+      <Filter>Source Dateien</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_containertab.cpp">
+      <Filter>Generierte Dateien\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_containertab.cpp">
+      <Filter>Generierte Dateien\Release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\loadermainwin.h">
+      <Filter>Source Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\loadermainwin.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\loadermainwin.qrc">
+      <Filter>Resource Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\qcustomstylewidget.h">
+      <Filter>Source Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\QtSingleApplication\qtlocalpeer.h">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\QtSingleApplication\qtsingleapplication.h">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\QtSingleApplication\qtsinglecoreapplication.h">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\qjsontranslator.h">
+      <Filter>Source Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\infotab.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\infotab.h">
+      <Filter>Source Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\configtab.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\configtab.h">
+      <Filter>Source Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\containertab.ui">
+      <Filter>Form Dateien</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\containertab.h">
+      <Filter>Source Dateien</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_loadermainwin.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QtSingleApplication\qtlockedfile.h">
+      <Filter>Source Dateien\QtSingleApplication</Filter>
+    </ClInclude>
+    <ClInclude Include="src\JSON\json.h">
+      <Filter>Source Dateien\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_infotab.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_configtab.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_containertab.h">
+      <Filter>Generierte Dateien</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

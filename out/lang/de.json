@@ -1,0 +1,23 @@
+﻿{
+	"LanguageInfo": {
+		"Language": "Deutsch",
+		"Author": "Rushh0ur",
+	}
+
+	"LoaderMainWin": {
+		"Caption": "RR Loader",
+		"Close Tab": "Tab Schliessen",
+	},
+	
+	"InfoTab": {
+		"Caption": "Über",
+	}
+	
+	"ConfigTab": {
+		"Caption": "Konfiguration",
+	}	
+	
+	"ContainerTab": {
+		"Caption": "Container",
+	}
+}

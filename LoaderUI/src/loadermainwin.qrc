@@ -1,0 +1,31 @@
+<RCC>
+  <qresource prefix="system">
+    <file>../Resources/systemDown.png</file>
+    <file>../Resources/systemUp.png</file>
+    <file>../Resources/systemMax.png</file>
+    <file>../Resources/captionGrad.png</file>
+    <file>../Resources/captionGradDisable.png</file>
+    <file>../Resources/systemMaxHover.png</file>
+    <file>../Resources/systemMin.png</file>
+    <file>../Resources/systemMinHover.png</file>
+    <file>../Resources/systemRest.png</file>
+    <file>../Resources/systemRestHover.png</file>
+    <file>../Resources/systemExit.png</file>
+    <file>../Resources/systemExitHover.png</file>
+  </qresource>
+  <qresource prefix="user">
+    <file>../Resources/pluginButtonDown.png</file>
+    <file>../Resources/pluginButtonHover.png</file>
+    <file>../Resources/pluginButtonNormal.png</file>
+    <file>../Resources/buttonAdd.png</file>
+    <file>../Resources/buttonConfig.png</file>
+    <file>../Resources/buttonInfo.png</file>
+    <file>../Resources/buttonPause.png</file>
+    <file>../Resources/buttonPlay.png</file>
+    <file>../Resources/buttonStop.png</file>
+    <file>../Resources/icon.png</file>
+    <file>../Resources/logo.png</file>
+    <file>../Resources/logoArea.png</file>
+    <file>../Resources/logoAreaDisable.png</file>
+  </qresource>
+</RCC>

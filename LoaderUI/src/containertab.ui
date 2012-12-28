@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ContainerTab</class>
+ <widget class="QWidget" name="ContainerTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string comment="Caption">Container</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
+     <property name="indentation">
+      <number>0</number>
+     </property>
+     <column>
+      <property name="text">
+       <string notr="true">Name</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Added</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Speed</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Progress</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

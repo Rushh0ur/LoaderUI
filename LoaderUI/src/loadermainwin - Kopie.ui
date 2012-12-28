@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoaderMainWin</class>
+ <widget class="QMainWindow" name="LoaderMainWin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>769</width>
+    <height>496</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string comment="Caption">RR Loader</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QCustomStyleWidget {
+button-width:16px;
+button-height:16px;
+button-spacing:4px;
+top:5px;
+left:5px;
+caption-image:url(:/system/Resources/captionGrad.png);
+caption-image-glow:url(:/system/Resources/captionGradDisable.png);
+margin:5px 24px 5px 0;
+}
+
+QPushButton#systemPushButtonExit {
+background:none;
+border:0;
+image:url(:/system/Resources/systemExit.png);
+}
+
+QPushButton#systemPushButtonExit:hover {
+image:url(:/system/Resources/systemExitHover.png);
+}
+
+QPushButton#systemPushButtonMinimize {
+background:none;
+border:0;
+image:url(:/system/Resources/systemMin.png);
+}
+
+QPushButton#systemPushButtonMinimize:hover {
+image:url(:/system/Resources/systemMinHover.png);
+}
+
+QPushButton#systemPushButtonMaximize {
+background:none;
+border:0;
+image:url(:/system/Resources/systemMax.png);
+}
+
+QPushButton#systemPushButtonMaximize:hover {
+image:url(:/system/Resources/systemMaxHover.png);
+}
+
+QPushButton#systemPushButtonMaximize[showrestore=&quot;true&quot;] {
+background:none;
+border:0;
+image:url(:/system/Resources/systemRest.png);
+}
+
+QPushButton#systemPushButtonMaximize:hover[showrestore=&quot;true&quot;] {
+image:url(:/system/Resources/systemRestHover.png);
+}
+
+QMainWindow {
+background:qlineargradient(spread:pad,x1:1,y1:0,x2:1,y2:1,stop:0 rgb(53,53,53), stop:1 rgb(39, 39, 39));
+border:1px solid #494a4f;
+border-radius:7px;
+}
+
+QMainWindow[showrestore=&quot;true&quot;] {
+border-radius:0;
+}</string>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+color:#fff;
+background-color:qlineargradient(spread:pad,x1:1,y1:0,x2:1, y2:1,stop:0 #464646,stop:1 #313131);
+border:1px solid #000;
+border-radius:4px; 
+}
+
+QPushButton:hover {
+background-color:qlineargradient(spread:pad,x1:1,y1:0,x2:1,y2:1,stop:0 #505050,stop:1 #3b3b3b);
+}
+
+QPushButton:pressed {
+background-color:qlineargradient(spread:pad,x1:1,y1:0,x2:1,y2:1,stop:0 #313131,stop:1 #464646);
+}
+
+QPushButton#pushButtonPause {
+border-radius:0px; 
+}
+
+QPushButton#pushButtonPlay {
+border-bottom-right-radius:0px; 
+border-top-right-radius:0px; 
+}
+
+QPushButton#pushButtonStop {
+border-bottom-left-radius:0px; 
+border-top-left-radius:0px; 
+}
+
+QPushButton#pushButtonPlugin {
+border: none;
+background:none;
+image:url(:/user/Resources/pluginButtonNormal.png);
+}
+
+QPushButton#pushButtonPlugin:hover {
+image:url(:/user/Resources/pluginButtonHover.png);
+}
+
+QPushButton#pushButtonPlugin:pressed {
+image:url(:/user/Resources/pluginButtonDown.png);
+}
+
+QTabWidget::pane { 
+border:1px solid #828790;
+}
+
+QTabWidget::tab-bar {
+left:0px; 
+}
+
+QTabBar::tab {
+color:#3d3d3d;
+background:qlineargradient(spread:pad,x1:1,y1:0,x2:1,y2:1,stop:0 #fafafa,stop:1 #c4c4c4);
+border:1px solid #9a9a99;
+border-bottom-color:#9a9a99;
+border-top-left-radius:4px;
+border-top-right-radius:4px;
+min-width:20ex;
+padding:1px 5px 1px 5px;
+margin:0px;
+image:none;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+color:#fff;
+background:qlineargradient(spread:pad,x1:1,y1:0,x2:1,y2:1,stop:0 #8ec44e,stop:1 #618c30);
+}
+
+QTabBar::tab:selected {
+border-color:#547a29;
+}
+
+QTabBar::tab:only-one {
+padding:2px 5px 3px 5px;
+}
+
+QTabBar::close-button {
+ image:url(:/system/Resources/systemExit.png);
+ }
+
+QTabBar::close-button:hover {
+image:url(:/system/Resources/systemExitHover.png);
+ }
+
+QProgressBar, QLabel {
+color:#FFF;
+}
+
+QProgressBar:horizontal {
+border:1px solid white;
+border-radius:5px;
+background:qlineargradient(x1:0,y1:0,x2:0,y2:1,stop: 0 #858489,stop: 1 #33363b);
+margin-right:32px;
+text-align:right;
+}
+
+QProgressBar::chunk:horizontal {
+background:qlineargradient(x1: 0,y1:0,x2:0,y2:1,stop: 0 #c9ff8d,stop: 1 #74bb1f);
+}
+
+QHeaderView::section {
+background-color:qlineargradient(x1:0,y1:0,x2:0,y2:1,stop: 0 #46494e,stop: 1 #2c2d2c);
+color:#FFF;
+padding:2px;
+padding-left:4px;
+border:none;
+border-left:1px solid #434443;
+border-bottom:1px solid #434443;
+}
+
+QHeaderView::section:first {
+borer-left:none;
+}
+
+QTreeView {
+background:#373a3f;
+color:#FFF;
+border:none;
+}
+
+QScrollBar::add-page, QScrollBar::sub-page {
+background:#303136;
+}
+
+QScrollBar:vertical {
+border:none;
+background:#303136;
+margin:20px 0px 20px 0px;
+}
+
+QScrollBar::handle:vertical {
+background:#FFF;
+border-radius:5px;
+margin-left:3px;
+margin-right:3px;
+}
+
+QScrollBar::add-line:vertical {
+background:#303136;
+height:20px;
+subcontrol-position:bottom;
+subcontrol-origin:margin;
+}
+
+QScrollBar::sub-line:vertical {
+background:#303136;
+height:20px;
+subcontrol-position:top;
+subcontrol-origin:margin;
+}
+
+QScrollBar:up-arrow:vertical {
+border-radius:4px;
+background: white;
+margin:2px;
+image:url(:/system/Resources/systemUp.png);
+}
+
+QScrollBar:down-arrow:vertical {
+border-radius:4px;
+background:#FFF;
+margin:0px;
+image:url(:/system/Resources/systemDown.png);	
+}
+
+QScrollArea, QWidget#scrollAreaPluginContents {
+padding:0px;
+background:transparent;
+}</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <property name="leftMargin">
+     <number>3</number>
+    </property>
+    <property name="topMargin">
+     <number>7</number>
+    </property>
+    <property name="rightMargin">
+     <number>3</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutHead">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widgetControlSpacer" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>132</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>132</width>
+          <height>24</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widgetLeftControls" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>134</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>134</width>
+          <height>24</height>
+         </size>
+        </property>
+        <widget class="QPushButton" name="pushButtonAdd">
+         <property name="geometry">
+          <rect>
+           <x>102</x>
+           <y>0</y>
+           <width>32</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/user/Resources/buttonAdd.png</normaloff>:/user/Resources/buttonAdd.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonPlay">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>32</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/user/Resources/buttonPlay.png</normaloff>:/user/Resources/buttonPlay.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonStop">
+         <property name="geometry">
+          <rect>
+           <x>62</x>
+           <y>0</y>
+           <width>32</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>32</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>32</width>
+           <height>24</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/user/Resources/buttonStop.png</normaloff>:/user/Resources/buttonStop.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonPause">
+         <property name="geometry">
+          <rect>
+           <x>31</x>
+           <y>0</y>
+           <width>32</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/user/Resources/buttonPause.png</normaloff>:/user/Resources/buttonPause.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progressBar">
+        <property name="value">
+         <number>48</number>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widgetRightConrols" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>72</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>72</width>
+          <height>24</height>
+         </size>
+        </property>
+        <widget class="QPushButton" name="pushButtonConfig">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>0</y>
+           <width>32</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/user/Resources/buttonConfig.png</normaloff>:/user/Resources/buttonConfig.png</iconset>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonInfo">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>32</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/user/Resources/buttonInfo.png</normaloff>:/user/Resources/buttonInfo.png</iconset>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayoutInfo">
+      <property name="spacing">
+       <number>8</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>4</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widgetInfoSpacer" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>132</width>
+          <height>13</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>132</width>
+          <height>13</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelInfo">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>13</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>13</height>
+         </size>
+        </property>
+        <property name="text">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QWidget" name="widgetContent" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayoutContent">
+       <property name="spacing">
+        <number>3</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="tabsClosable">
+          <bool>true</bool>
+         </property>
+         <property name="movable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>Page</string>
+          </attribute>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollAreaPlugins">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>64</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <widget class="QWidget" name="scrollAreaPluginContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>761</width>
+            <height>200</height>
+           </rect>
+          </property>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widgetFoot" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>16</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayoutFoot">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacerLeft">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonPlugin">
+         <property name="minimumSize">
+          <size>
+           <width>132</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>132</width>
+           <height>16</height>
+          </size>
+         </property>
+         <property name="text">
+          <string notr="true"/>
+         </property>
+         <property name="icon">
+          <iconset resource="loadermainwin.qrc">
+           <normaloff>:/system/Resources/systemUp.png</normaloff>:/system/Resources/systemUp.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacerRight">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="loadermainwin.qrc"/>
+ </resources>
+ <connections/>
+</ui>
